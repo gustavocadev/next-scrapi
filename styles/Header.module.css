@@ -1,0 +1,142 @@
+.header {
+    background-image: linear-gradient(to right, rgb(0 0 0 / .8), rgb( 0 0 0 / .7 )), url('../public/img/header.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 1rem 0;
+    position: relative;
+}
+
+.nav a {
+    color: white
+}
+
+.bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media(min-width: 768px){
+    .bar {
+         flex-direction: row;
+         justify-content: space-between;
+    }
+}
+
+
+.nav{
+    margin-top: 5rem;
+    display: flex;
+    gap: 2rem
+}
+
+@media(min-width: 768px){
+    .nav {
+        margin-top: 0
+    }
+}
+
+.nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: .5rem;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    z-index: 100;
+}
+
+.nav a:hover {
+    background-color: var(--primary);
+}
+
+
+.model {
+    color: var(--blanco);
+    margin-top: 5rem;
+    text-align: center;
+
+}
+
+@media (min-width: 768px){
+    .model {
+        text-align: left;
+        width: 50%;
+
+    }
+}
+
+
+.model h1 {
+    font-size: 8rem;
+
+}
+
+.model p:first-of-type {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+      font-size: 2.2rem;
+}
+
+
+.price {
+    font-size: 6rem;
+    color : var(--primary);
+    font-weight: 900;
+    line-height: 0;
+
+}
+
+.link {
+    margin-top: 2rem;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--blanco);
+    border: 2px solid var(--primary);
+    padding: 1rem 5rem;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    cursor: pointer
+}
+
+.link:hover {
+    background-color: var(--primary);
+    color: var(--blanco)
+}
+
+.guitar{
+    display: none;
+}
+
+@media(min-width: 992px) {
+    .guitar {
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        animation-name: showImage;
+        animation-duration: 1s;
+    }
+}
+
+@keyframes showImage {
+    0%{
+        opacity: 0;
+        transform: translateX(-10rem)
+    }
+    50% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0rem)
+    }
+}
